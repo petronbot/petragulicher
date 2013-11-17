@@ -1,0 +1,29 @@
+/* Site skin v1.0 */
+/* 2nd May, 2012  */
+/* Petra Gulicher */
+
+h1, h2, h3, h4 { font-family: Oxygen; }
+
+h1 { font-size: 32px; font-size: 3.2rem; margin-bottom: 12px;}
+h2 { font-size: 28px; font-size: 2.8rem; margin-bottom: 9px; }
+h3 { font-size: 24px; font-size: 2.4rem; margin-bottom: 9px; }
+h4 { font-size: 12px; font-size: 1.2rem; margin-bottom: 3px; }
+body {
+	background: transparent url(../images/bg.jpg) repeat fixed 0 0;
+}
+.header {
+	padding: 1% 0 4% 0;
+}
+.circle {
+	background: rgba(200, 54, 54, 0.5);
+	border-radius: 50%;
+    margin: 0px auto;
+	position: relative;
+	width: 10%;
+}
+.circle:nth-child(2) { background: rgba(54, 200, 130, 0.5); top: -50%; left: 3%;}
+.circle:nth-child(3) { background: rgba(200, 200, 54, 0.5); top: -150%; right: 3%;}
+.panel img {
+	margin: -20px 0 10px -20px;
+	max-width: 200%;
+}

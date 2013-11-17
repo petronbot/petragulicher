@@ -1,0 +1,392 @@
+@import url(webfonts.css);
+@import url(reset.css);
+
+
+body {
+  font-size: 0.875em; /* Reset font-size to 14px */
+}
+
+/* ===== Global Styles ========================================================
+   Author:
+   ========================================================================== */
+
+p, li, a, td, th {
+  color: #fff;
+  font: 1em/1.5em 'Humanist521BT-Roman',Arial,sans-serif;
+}
+p { line-height: 1.3em; padding-bottom: 15px; }
+
+th { font-weight: bold; text-align: left; }
+
+.content table {
+  margin-bottom: 15px;
+  width: 100%;
+}
+.content ul {
+  margin: 0px 0px 1em 0px;
+
+}
+.content ul li {
+  list-style-type: disc;
+  margin: 0px 0px 0.25em 1.5em;
+}
+
+
+h3 { color:#fff; font: 1em/1.5em 'Humanist521BT-Roman',Arial,sans-serif; }
+h4 { color: #fff; font: 1em/1.5em 'Humanist521BT-Roman',Arial,sans-serif; text-transform: uppercase; }
+h5 { color: #fff; font: 1em/1.5em 'Humanist521BT-Bold',Arial,sans-serif; text-transform: uppercase; padding-bottom: 15px; }
+h6 { color: #fff; font: 1em/1.5em 'Humanist521BT-Bold',Arial,sans-serif; }
+
+.quote { font: 3em/0.75em 'PFChampionScriptPro-Bold',serif; color: #c6a44e; padding: 10px 0px; }
+.border { border: 1px solid #03306a;}
+.highlight-link { color: #be9e55; cursor: pointer; margin: 15px; text-decoration: none;}
+.highlight-link:after { content: "     >"; }
+
+/* =============================================================================
+   Layout Styles
+   ========================================================================== */
+
+body {
+  background: #044587 url(../img/bg.jpg) no-repeat center top;
+  background-size: 100% auto;
+}
+
+.shadow {
+  background: url(../img/bg-shadow.png) no-repeat center top;
+}
+
+.wrapper {
+  margin: 0px auto;
+  padding-bottom: 100px;
+  position: relative;
+  width: 975px;
+}
+
+
+
+.image-slider {
+  position: absolute;
+  top:0px;
+  left:0px;
+  z-index: -90;
+}
+.showcase-button-wrapper { position: absolute; top: 80px; right: 15px; z-index: 90;}
+.showcase-button-wrapper span { color: #343434; cursor: pointer; }
+.showcase-button-wrapper span.active { color: #999; }
+
+.container {
+  position: absolute;
+  top:0px;
+  left:0px;
+  z-index: 80;
+  width: 975px;
+  height: 805px;
+}
+
+.header {
+  border-top: 1px solid #03306a;
+  border-bottom : 1px solid #03306a;
+  border-left : 1px solid #03306a;
+  margin-left: 142px;
+}
+
+.logo-contain {
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 101px;
+  height: 147px;
+}
+
+.strapline {
+  color: #999;
+  font-size: 5em;
+  font-family: 'PFChampionScriptPro-Bold',serif;
+  font-weight: normal;
+  line-height: 1em;
+  opacity: 0.7;
+  padding:20px;
+  position: absolute;
+  bottom: -0.79em;
+  right: 50px;
+  z-index: 80;
+  text-shadow: 1px 1px 3px #111;
+}
+
+.content-main {
+  padding: 0px 35px;
+  z-index: 9999;
+}
+
+.intro {
+  font-size: 1.2em;
+  margin-top: 240px;
+  padding: 0px 70px 20px;
+  text-align: center;
+  text-shadow: 1px 1px 3px #111;
+}
+
+.column {
+  float: left;
+  width: 450px;
+}
+.column.last {
+  padding-left: 25px;
+  width: 425px;
+}
+.feature-img-contain {
+  border: 1px solid #00275d;
+  height: 313px;
+  margin-bottom: 20px;
+  width: 428px;
+}
+
+.content-section {
+  background: transparent url(../img/bg-blue-striped.png) left top repeat;
+  padding: 15px 10px;
+  height: 500px;
+  width: 430px;
+}
+
+
+/*  ---- Breadcrumbs ---------------------------------------------------------*/
+
+.breadcrumbs {
+  margin: 140px 35px 0px 35px;
+  padding: 0px 0px 10px 0px;
+}
+.breadcrumbs li {
+  display: inline;
+  padding: 0px 3px 0px 0px;
+}
+.breadcrumbs li:before {
+  content: ">";
+}
+.breadcrumbs li.first:before {
+  content: "";
+}
+.breadcrumbs a, .breadcrumbs a:link, .breadrumbs a:visited, .breadcrumbs a:active {
+  color: #fff;
+  font: 1em/1.5em 'Humanist521BT-Roman';
+  padding: 0px 0px 0px 3px;
+  text-decoration: none;
+  text-shadow: 1px 1px 3px #111;
+}
+.breadcrumbs a.selected {
+  font-family:'Humanist521BT-Bold';
+}
+
+
+/* =============================================================================
+   Tile Styles
+   ========================================================================== */
+
+.tile-contain {
+  float: left;
+  margin: 0px 0 10px 40px;
+  width: 430px;
+}
+
+.tile-heading {
+  background: transparent url(../img/bg-gold-striped.png) left top repeat;
+  border: 1px solid #00275d;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 1px;
+  padding: 3px 10px;
+}
+
+.tile-contain.first {
+  margin-left: 0px;
+}
+
+.tile-contain .tile-content {
+  height: 143px;
+  position:relative;
+  z-index: 90;
+}
+
+.tile-contain.sml .tile-content {
+  height:110px;
+}
+
+
+.tile-content {
+  background: transparent url(../img/bg-blue-striped.png) left top repeat;
+  border: 1px solid #00275d;
+  overflow: auto;
+  padding: 10px;
+}
+
+
+
+/* =============================================================================
+   Nav Styles
+   ========================================================================== */
+
+.nav {
+  float:right;
+  margin-right: 15px;
+}
+
+.nav li {
+  float:left;
+  padding: 0 15px;
+  position: relative;
+}
+
+.nav a:link, .nav a:visited, .nav a:active {
+  color: #fff;
+  cursor:pointer;
+  display: block;
+  line-height: 2em;
+  padding: 5px 3px;
+  text-decoration: none;
+  cursor: default;
+}
+.nav a:hover {
+  color: #be9e55;
+}
+.gold-wrapper .nav a:hover {
+  color: #0a3570;
+  cursor: pointer;
+}
+
+.gold-wrapper {
+  background: transparent url(../img/bg-gold.png) left top repeat;
+}
+
+.blue-wrapper {
+  background: transparent url(../img/bg-blue.png) left top repeat;
+}
+
+/* First level drop-downs */
+
+.sub-nav {
+  background: transparent url(../img/bg-blue.png) left top repeat;
+  border-right: 1px solid #03306a;
+  border-bottom: 1px solid #03306a;
+  border-left: 1px solid #03306a;
+  position:absolute;
+  left: -9999px;
+  z-index: 90;
+}
+.gold-wrapper .sub-nav {
+  background: transparent url(../img/bg-gold.png) left top repeat;
+}
+
+.sub-nav li {
+  display:block;
+  margin-top: -1px;
+  text-align:left;
+  width: 139px;
+}
+
+.sub-nav a, .sub-nav a:link, .sub-nav a:visited, .sub-nav a:active {
+  display:block;
+  padding: 0px 3px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.nav li:hover > .sub-nav, .sub-nav li:hover, .sub-nav-visible {
+  left: 0px;
+}
+.nav.global li > .sub-nav {
+ left: 0px;
+  display:none;
+}
+.nav.global li:hover > .sub-nav {
+  left: 0px;
+}
+.has-sub-nav {
+  background: transparent url(../img/arrow-right.png) right center no-repeat;
+}
+
+
+/* Second level of drop-downs */
+
+.sub-nav .sub-nav {
+  border-top: 1px solid #03306a;
+  position: absolute;
+  left: -9999px;
+}
+
+.sub-nav li:hover > .sub-nav {
+  left: 169px;
+  top: 0px;
+}
+
+/* Gateway level drop-downs */
+
+.sub-nav.gateway {
+  background: transparent url(../img/bg-gold-solid.png) left top repeat;
+}
+.gateway-on {
+  background: transparent url(../img/bg-gateway-on.png) 13px 8px no-repeat;
+}
+.gold-wrapper .nav .gateway-on a:hover {
+  color:#fff;
+}
+.gold-wrapper .nav .gateway-on ul li a:hover {
+  color:#0a3570;
+}
+
+
+/* =============================================================================
+   Custon JQuery Scrollbars (http://manos.malihu.gr/jquery-custom-content-scroller)
+   ========================================================================== */
+
+#mcs_container{position:relative; height:500px;}
+#mcs_container .customScrollBox{position:relative; height:100%; overflow:hidden;}
+#mcs_container .customScrollBox .container{position:relative; width:415px; top:0; float:left;}
+#mcs_container .customScrollBox .content{clear:both;}
+#mcs_container .dragger_container{position:relative; width:2px; height:500px; float:left; background:none; cursor:pointer }
+#mcs_container .dragger{position:absolute; width:0px; height:0px; background:none; overflow:hidden; }
+#mcs_container .dragger_pressed{position:absolute; width:4px; margin-left:-1px; height:60px; background:#999; text-align:center; line-height:60px; color:#666; overflow:hidden; }
+#mcs_container .scrollUpBtn,#mcs_container .scrollDownBtn{position:absolute; display:inline-block; width:15px; height:15px; right:0; }
+#mcs_container .scrollUpBtn{top:5px; background:url(../img/sprite-arrows.png) 0px 0px no-repeat;}
+#mcs_container .scrollDownBtn{bottom:0px; background:url(../img/sprite-arrows.png) -15px 0px no-repeat;}
+
+
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+	/* Style adjustments for viewports that meet the condition */
+}
+
+/* =============================================================================
+   Non-Semantic Helper Classes
+   ========================================================================== */
+
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+/* =============================================================================
+   Print Styles
+   ========================================================================== */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
