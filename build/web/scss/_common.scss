@@ -1,0 +1,10 @@
+* {
+	@include box-sizing(border-box);
+	&:focus {
+		outline: none;
+	}
+}
+
+body {
+	@include body-font;
+}

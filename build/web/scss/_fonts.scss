@@ -1,0 +1,21 @@
+/* font definitions and web fonts */
+
+@include font-face(
+  'SSStandard',
+  inline-font-files(
+    'ss-standard.woff', woff,
+    'ss-standard.ttf', ttf,
+    'ss-standard.svg', svg
+  )
+);
+
+@mixin icon-font {
+	font-family: "SSStandard";
+    -webkit-font-smoothing: antialiased;
+}
+
+@mixin body-font {
+   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}

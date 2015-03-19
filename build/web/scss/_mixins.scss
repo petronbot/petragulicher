@@ -1,0 +1,9 @@
+@mixin gradient($angle: 0deg, $start: $colour-teal, $end: $colour-blue) {
+	background-image: linear-gradient($angle, $start, $end);
+}
+
+@mixin list-reset() {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
