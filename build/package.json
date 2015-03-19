@@ -1,6 +1,6 @@
 {
-  "name": "HIC-HickinbothamWebsite",
-  "description": "Hickinbotham Website: The best project ever.",
+  "name": "petragulicher.com",
+  "description": "A personal portfolio website",
   "version": "0.1.0",
   "repository": {
     "type": "git",
@@ -15,7 +15,6 @@
   "devDependencies": {
     "grunt-contrib-jshint": "latest",
     "grunt-contrib-concat": "latest",
-    "grunt-contrib-nodeunit": "latest",
     "grunt-contrib-requirejs": "latest",
     "grunt-contrib-uglify": "latest",
     "grunt-contrib-watch": "latest",
@@ -23,7 +22,6 @@
     "grunt-contrib-copy": "latest",
     "grunt-contrib-compass": "latest",
     "grunt-contrib-connect": "latest",
-    "grunt-monkeytestjs": "latest",
     "grunt-dox": "latest",
     "grunt-jsbeautifier": "latest",
     "nodemock": "latest",
@@ -31,8 +29,6 @@
     "underscore": "latest",
     "jquery": "latest",
     "requirejs": "latest",
-    "grunt-phpunit": "latest",
-    "grunt-phpdocumentor": "git://github.com/gomoob/grunt-phpdocumentor.git",
     "grunt-reload": "git://github.com/webxl/grunt-reload.git",
     "grunt": "~0.4.5"
   }

@@ -78,17 +78,6 @@ module.exports = function (grunt) {
         src: ['web/js/lib/**/*.js', 'web/js/app/**/*.js', 'web/js/*.js']
       }
     },
-    nodeunit: {
-      all: ['web/test/**/*_test.js']
-    },
-    phpunit: {
-      classes: {
-        dir: 'app/tests/'
-      },
-      options: {
-        configuration: 'phpunit.xml'
-      }
-    },
     compass: {
       options: {
         sassDir: 'web/scss',
@@ -125,12 +114,6 @@ module.exports = function (grunt) {
         dest: 'doc/javascript'
       }
     },
-    phpdocumentor: {
-      dist: {
-        directory: ['app'],
-        target: 'doc/php/doc'
-      }
-    },
     watch: {
       all: {
         files: ['web/scss/**/*.scss', '<%= jshint.lib_test.src %>'],
@@ -143,10 +126,6 @@ module.exports = function (grunt) {
       js: {
         files: ['<%= jshint.lib_test.src %>'],
         tasks: ['copy:js', 'reload']
-      },
-      php: {
-        files: '<%= phpunit.classes.dir %>',
-        tasks: ['phpunit']
       },
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
@@ -191,7 +170,6 @@ module.exports = function (grunt) {
   // Better naming conventions
   grunt.registerTask('lint', 'Lint javascript files with default validator', 'jshint');
   grunt.registerTask('min', 'Minify files with default minifier', 'uglify');
-  grunt.registerTask('test', 'Unit testing on the command line with default testing framework', 'nodeunit');
 
   // reload
   grunt.loadNpmTasks('grunt-reload');
@@ -199,12 +177,8 @@ module.exports = function (grunt) {
   // beautifier
   grunt.loadNpmTasks('grunt-jsbeautifier');
 
-  // php unit
-  grunt.loadNpmTasks('grunt-phpunit');
-
   // documentation generation
   grunt.loadNpmTasks('grunt-dox');
-  grunt.loadNpmTasks('grunt-phpdocumentor');
 
   // watch tasks
   grunt.registerTask('dev', ['reload', 'watch:all']);
@@ -215,6 +189,6 @@ module.exports = function (grunt) {
   grunt.registerTask('docs', ['dox']); // add 'phpdocumentor' after 'dox' here if using php
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'jsbeautifier', 'clean', 'test', 'requirejs:prod', 'compass:prod']);
+  grunt.registerTask('default', ['jshint', 'jsbeautifier', 'clean', 'requirejs:prod', 'compass:prod']);
 
 };
