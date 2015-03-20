@@ -1,0 +1,24 @@
+$scale-unit: 1.414rem;
+
+header, section, aside, footer {
+	padding-left: $scale-unit;
+	padding-right: $scale-unit;
+}
+
+section {
+	overflow: hidden;
+}
+
+.preamble {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.inline-column {
+	padding: 0 2em 0 0;
+	@media #{$phablet} {
+		@include inline-block;
+		vertical-align: top;
+		max-width: 40%;
+	}
+}
