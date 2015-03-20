@@ -8,6 +8,7 @@
   "name": "petragulicher.com",
   "version": "0.1.0",
   "devDependencies": {
-    "tooltipster": "~3.3.0"
+    "tooltipster": "~3.3.0",
+    "skrollr": "~0.6"
   }
 }
