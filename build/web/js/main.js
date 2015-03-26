@@ -30,14 +30,18 @@
             // Init scrolling nav
             $('.section-links').singlePageNav();
 
-            // Init scroll effects
-            $('.work-tile').attr({
-                'data-start': 'margin-top:3em',
-                'data--100-bottom': 'margin-top:0em'
-            });
-            this.scrolling = skrollr.init({
-                forceHeight: false
-            });
+            if (this.width() > 768) {
+
+                // Init scroll effects
+                $('.work-tile').attr({
+                    'data-start': 'margin-top:3em',
+                    'data--100-bottom': 'margin-top:0em'
+                });
+                this.scrollEffects = skrollr.init({
+                    forceHeight: false
+                });
+
+            }
 
         });
     });

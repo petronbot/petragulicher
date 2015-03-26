@@ -1,8 +1,13 @@
 $scale-unit: 1.414rem;
 
 header, section, aside, footer {
-	padding-left: $scale-unit;
-	padding-right: $scale-unit;
+
+	padding-left: $scale-unit * 0.75;
+	padding-right: $scale-unit * 0.75;
+	@media #{$phablet} {
+		padding-left: $scale-unit;
+		padding-right: $scale-unit;
+	}
 }
 
 section {

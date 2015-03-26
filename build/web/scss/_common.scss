@@ -37,7 +37,10 @@ h1, h2, h3, h4 {
 
 h1 {
   margin-top: 0;
-  font-size: 3.998em;
+  font-size: 3em;
+  @media #{$phablet} {
+  	font-size: 3.998em;
+  }
 }
 
 h2 {font-size: 2.827em;}
@@ -71,6 +74,7 @@ em {
 	position: relative;
 	color: #333;
 	text-decoration: none;
+	padding: 0.25em 0;
 	&:before {
 		position: absolute;
 		top: 100%;
