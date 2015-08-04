@@ -7,6 +7,9 @@
                 deps: ['jquery'],
                 exports: 'tooltipster'
             },
+            'strip': {
+                deps: ['jquery']
+            },
             'singlePageNav': {
                 deps: ['jquery'],
                 exports: 'singlePageNav'
@@ -16,10 +19,11 @@
             "jquery": "../bower_components/jquery/dist/jquery",
             "tooltipster": "../bower_components/tooltipster/js/jquery.tooltipster",
             "singlePageNav": "vendor/plugins/jquery.singlePageNav",
-            "skrollr": "../bower_components/skrollr/dist/skrollr.min"
+            "skrollr": "../bower_components/skrollr/dist/skrollr.min",
+            "strip": "../bower_components/strip/dist/js/strip.pkgd"
         }
     });
-    require(['jquery', 'skrollr', 'tooltipster', 'singlePageNav'], function ($, skrollr) {
+    require(['jquery', 'skrollr', 'tooltipster', 'singlePageNav', 'strip'], function ($, skrollr) {
         $(window).ready(function () {
 
             // Init tooltips
@@ -30,7 +34,7 @@
             // Init scrolling nav
             $('.section-links').singlePageNav();
 
-            if (this.width() > 768) {
+            if (document.documentElement.clientWidth > 768) {
 
                 // Init scroll effects
                 $('.work-tile').attr({

@@ -10,8 +10,9 @@
 // import html5 boilerplate's main.css
 @import "html5boilerplate";
 
-@import "../bower_components/tooltipster/css/tooltipster";
-@import "../bower_components/tooltipster/css/themes/tooltipster-light";
+@import "vendor/tooltipster";
+@import "vendor/tooltipster-light";
+@import "vendor/strip";
 
 /* basic structure */
 @import "variables";

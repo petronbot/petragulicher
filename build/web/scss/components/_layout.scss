@@ -27,3 +27,10 @@ section {
 		max-width: 40%;
 	}
 }
+
+.two-column {
+	@media #{$phablet} {
+		width: 60%;
+		vertical-align: bottom;
+	}
+}
