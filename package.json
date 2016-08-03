@@ -1,0 +1,20 @@
+{
+  "name": "petragulicher.com",
+  "version": "1.0.0",
+  "description": "A portfolio website for Petra Gulicher, web developer.",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petronbot/petragulicher.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/petronbot/petragulicher/issues"
+  },
+  "private": true,
+  "homepage": "https://github.com/petronbot/petragulicher#readme"
+}
