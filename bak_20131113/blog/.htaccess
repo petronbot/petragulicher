@@ -1,6 +1,0 @@
-
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^blog\.petragulicher\.com$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.blog\.petragulicher\.com$
-RewriteRule ^/?$ "http\:\/\/petragulicher\.wordpress\.com\/" [R=301,L]
-
