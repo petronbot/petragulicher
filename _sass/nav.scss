@@ -1,0 +1,25 @@
+.page__nav-toggle {
+  position: absolute;
+  top: $space-m;
+  @media #{$media-med} {
+    display: none;
+  }
+}
+
+.page__nav {
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    width: 50%;
+    margin: $space-xs 0;
+    font-family: $font-heading;
+    font-weight: bold;
+  }
+}

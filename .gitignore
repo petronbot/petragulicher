@@ -43,5 +43,6 @@ doc
 # Other
 testem.json
 
-#divshot cache
-.divshot-cache
+_site
+.sass-cache
+.jekyll-metadata

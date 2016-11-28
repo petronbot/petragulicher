@@ -1,0 +1,48 @@
+@mixin decoration-outline {
+  outline: $space-xs solid rgba($colour-highlight, .75);
+};
+
+@mixin decoration-underline {
+  text-decoration: underline;
+}
+
+@mixin decoration-theme($bg-colour, $fg-colour) {
+  background-color: $bg-colour;
+  color: $fg-colour;
+
+  @media #{$media-med} {
+    &::before {
+      content: '';
+      display: block;
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-color: transparent $fg-colour transparent transparent;
+      border-width: 100vh 30vw 0 70vw;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+
+  a {
+    color: $fg-colour;
+  }
+
+  button,
+  a[role='button'] {
+    transition-property: background-color, color;
+    transition-duration: $timing-instant;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($fg-colour, .75);
+      border-color: $fg-colour;
+      color: $bg-colour;
+    }
+  }
+
+};

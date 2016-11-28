@@ -1,0 +1,15 @@
+button,
+a[role="button"] {
+  appearance: none;
+  border: none;
+  text-decoration: none;
+  background: none;
+  padding: $space-xs $space-s;
+  border: 2px solid;
+  border-radius: $space-xs;
+  cursor: pointer;
+
+  &:focus {
+    @include decoration-outline;
+  }
+}

@@ -1,0 +1,15 @@
+body {
+  @include decoration-theme($colour-iceberg, $colour-gumleaf);
+  padding: $space-m;
+  min-height: 100vh;
+
+  &.home {
+    @include decoration-theme($colour-gumleaf, $colour-iceberg);
+  }
+}
+
+main {
+  @media #{$media-med} {
+    max-width: 70%;
+  }
+}

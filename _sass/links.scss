@@ -1,0 +1,7 @@
+a {
+  @include decoration-underline;
+
+  &:focus {
+    @include decoration-outline;
+  }
+}
