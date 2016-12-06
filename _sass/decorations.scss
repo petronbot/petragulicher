@@ -1,35 +1,45 @@
 @mixin decoration-outline {
   outline: $space-xs solid rgba($colour-highlight, .75);
-};
-
-@mixin decoration-underline {
-  text-decoration: underline;
 }
 
-@mixin decoration-theme($bg-colour, $fg-colour) {
-  background-color: $bg-colour;
-  color: $fg-colour;
+@mixin decoration-underline {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+@mixin decoration-theme($colour-bg, $colour-fg) {
+  background-color: $colour-bg;
+  color: $colour-fg;
 
   @media #{$media-med} {
-    &::before {
-      content: '';
-      display: block;
-      width: 0px;
-      height: 0px;
-      border-style: solid;
-      border-color: transparent $fg-colour transparent transparent;
-      border-width: 100vh 30vw 0 70vw;
+    @include decoration-triangle($colour-highlight, 100vh 30vw 0 70vw) {
       position: fixed;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      z-index: -1;
     }
+
+    &.home {
+      @include decoration-triangle($colour-fg, 100vh 30vw 0 70vw);
+    }
+
+  }
+
+  h1 {
+    color: $colour-highlight;
+  }
+
+  &.home h1 {
+    color: $colour-fg;
   }
 
   a {
-    color: $fg-colour;
+    color: $colour-fg;
+    &:hover,
+    &:active {
+      background-color: rgba($colour-highlight, .25);
+    }
   }
 
   button,
@@ -39,10 +49,24 @@
 
     &:hover,
     &:focus {
-      background-color: rgba($fg-colour, .75);
-      border-color: $fg-colour;
-      color: $bg-colour;
+      background-color: rgba($colour-fg, .75);
+      border-color: $colour-fg;
+      color: $colour-bg;
     }
   }
 
-};
+}
+
+@mixin decoration-triangle($colour, $dimensions) {
+  &::before {
+    z-index: -1;
+    content: '';
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-color: transparent $colour transparent transparent;
+    border-width: #{$dimensions};
+    @content;
+  }
+}

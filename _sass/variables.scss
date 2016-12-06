@@ -1,7 +1,5 @@
 $media-med: "screen and (min-width: 799px)";
 
-$colour-highlight: #beefed;
-
 // A11y pairings
 $colour-olive-green: #b4c37d;
 $colour-midnight-blue: #000b51;
@@ -15,9 +13,23 @@ $colour-straw: #f9f3be;
 $colour-gumleaf: #767755;
 $colour-iceberg: #fafff0;
 
+$colour-purple-heart: #7415b5;
+$colour-caribbean-green: #12ffe4;
+
+$colour-cerulean: #2b8dce;
+$colour-black: #261c0c;
+
+// Usage specific
+$colour-highlight: $colour-cerulean;
+
+$space-xl: modular-scale(2);
 $space-l: modular-scale(1);
 $space-m: modular-scale(1, .5em);
 $space-s: .5em;
 $space-xs: .25em;
+
+$layout-max-width: 70%;
+
+$font-size-s: modular-scale(1, .5em);
 
 $timing-instant: .2s;

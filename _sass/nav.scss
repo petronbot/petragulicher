@@ -1,19 +1,24 @@
-.page__nav-toggle {
+.nav__main--toggle {
   position: absolute;
-  top: $space-m;
+  top: $space-l;
+  right: $space-l;
   @media #{$media-med} {
     display: none;
   }
 }
 
-.page__nav {
+.nav__main {
 
   ul {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    padding: 0;
+    padding: $space-l 0;
+
+    @media #{$media-med} {
+      max-width: 70%;
+    }
   }
 
   li {
@@ -22,4 +27,8 @@
     font-family: $font-heading;
     font-weight: bold;
   }
+}
+
+.nav__pagination {
+  padding: $space-l 0;
 }

@@ -1,0 +1,9 @@
+<nav class="nav__main">
+  <a class="nav__main--toggle" role="button" href="#nav">Menu</a>
+  <ul id="nav">
+    {% assign pages = site.pages | sort: 'order', 'last'  %}
+    {% for page in pages %}
+      <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>

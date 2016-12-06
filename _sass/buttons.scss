@@ -4,10 +4,11 @@ a[role="button"] {
   border: none;
   text-decoration: none;
   background: none;
-  padding: $space-xs $space-s;
+  padding: $space-s $space-s;
   border: 2px solid;
   border-radius: $space-xs;
   cursor: pointer;
+  font-size: $font-size-s;
 
   &:focus {
     @include decoration-outline;

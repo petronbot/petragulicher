@@ -5,3 +5,12 @@ a {
     @include decoration-outline;
   }
 }
+
+.link__back {
+  &:before {
+    content: "❮";
+    display: inline-block;
+    margin-right: $space-m;
+    font-size: $font-size-s;
+  }
+}

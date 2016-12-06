@@ -1,15 +1,33 @@
 body {
-  @include decoration-theme($colour-iceberg, $colour-gumleaf);
+  @include decoration-theme($colour-iceberg, $colour-black);
   padding: $space-m;
+  box-sizing: border-box;
   min-height: 100vh;
 
   &.home {
-    @include decoration-theme($colour-gumleaf, $colour-iceberg);
+    @include decoration-theme($colour-cerulean, $colour-iceberg);
+  }
+
+  @media #{$media-med} {
+    padding: $space-l;
   }
 }
 
 main {
   @media #{$media-med} {
-    max-width: 70%;
+    max-width: $layout-max-width;
+  }
+}
+
+hr {
+  border-bottom: none;
+  border-top: 1px dashed;
+  background: none;
+  outline: none;
+  max-width: $layout-max-width;
+  margin-right: 100% - $layout-max-width;
+
+  main & {
+    max-width: none;
   }
 }

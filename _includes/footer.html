@@ -1,14 +1,8 @@
 <footer>
-  <nav class="page__nav">
-    <a class="page__nav-toggle" role="button" href="#nav">Menu</a>
-    <ul id="nav">
-      <li><a href="{{ site.baseurl }}{% link index.md %}">Home</a></li>
-      <li><a href="{{ site.baseurl }}{% link about.md %}">About</a></li>
-      <li><a href="">Speaking</a></li>
-      <li><a href="">Contact</a></li>
-    </ul>
-  </nav>
-  <p>© {{ site.time | date: '%Y' }} Petra Gulicher.</p>
+  <hr />
+  {% include nav_main.html %}
+  <p>© {{ 'now' | date: '%Y' }} Petra Gulicher, updated on {{ 'now' | date: "%a, %e %b"}}.</p>
+  <p><a href="{{ site.github_url }}">GitHub</a> / <a href="{{ site.insta_url }}">Instagram</a> / <a href="{{ site.twitter_url }}">Twitter</a>.</p>
 </footer>
 
 </body>

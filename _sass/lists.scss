@@ -1,0 +1,28 @@
+main {
+  ul,
+  ol {
+    margin-left: $space-l;
+    margin-bottom: $space-xl;
+    padding-left: 0;
+
+    li {
+      margin-bottom: $space-s;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      position: relative;
+
+      &:before {
+        content: '❯❯';
+        font-size: $font-size-s;
+        position: absolute;
+        left: -1 * $space-xl;
+        top: $space-xs;
+      }
+    }
+  }
+}

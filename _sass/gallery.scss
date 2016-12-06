@@ -1,0 +1,21 @@
+.gallery {
+  display: flex;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.gallery--large {
+
+  img {
+    max-width: 100%;
+    margin-bottom: $space-l;
+
+    @media #{$media-med} {
+      max-width: 30%;
+      margin-right: $space-m;
+      vertical-align: middle;
+    }
+  }
+}

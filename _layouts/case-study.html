@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<!-- Layout variables -->
+{% assign img_prefix = page.prefix %}
+{% assign case_study_images = site.static_files | where_exp: 'image', "image.extname contains 'png'" | where_exp: 'image', "image.name contains page.prefix" %}
+
+<p><small>{{ page.tags | join: " / "}}</small></p>
+
+{{ content }}
+
+<h4>Links</h4>
+<ul class="external-links">
+  {% for link in page.links %}
+  <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+  {% endfor %}
+</ul>
+
+<h4>Gallery</h4>
+<section class="gallery">
+  {% for image in case_study_images %}
+  <figure>
+    <a href="{{ site.base_url }}{{ image.path }}"><img src="{{ site.base_url }}{{ image.path }}" alt=""></a>
+  </figure>
+  {% endfor %}
+</section>
+
+<section class="nav__pagination">
+  <p><a class="link__back" href="{{ site.base_url }}/work">Back to Work</a></p>
+</section>

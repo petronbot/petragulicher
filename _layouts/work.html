@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<section class="gallery--large">
+  {% assign work_images = site.static_files | where_exp: 'image', "image.name contains 'work'" %}
+  {% for image in work_images %}
+  <img src="{{ site.base_url }}{{ image.path }}" alt="">
+  {% endfor %}
+</section>
+
+{{ content }}

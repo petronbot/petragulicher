@@ -1,6 +1,8 @@
 <header>
-  <h1 class="page__logo">Pretty much done</h1>
-  {% unless page.title == nil %}
-  <h2 class="page__heading"></h2>
+  <h1>Pretty much done</h1>
+  {% if page.title %}
+  {% unless page.title == 'Home' %}
+  <h2 class="page__heading">{{ page.title }}</h2>
   {% endunless %}
+  {% endif %}
 </header>
