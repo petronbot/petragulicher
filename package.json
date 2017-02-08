@@ -7,7 +7,7 @@
     "test": "",
     "serve": "jekyll build --watch & node_modules/browser-sync/bin/browser-sync.js start --server --ss ./_site --files \"_site/*.*\" & wait",
     "build": "jekyll build",
-    "deploy": "./node_modules/firebase-tools/bin/firebase"
+    "deploy": "./node_modules/firebase-tools/bin/firebase deploy"
   },
   "repository": {
     "type": "git",
