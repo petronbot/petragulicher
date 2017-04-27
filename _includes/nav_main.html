@@ -3,7 +3,9 @@
   <ul id="nav">
     {% assign pages = site.pages | sort: 'order', 'last'  %}
     {% for page in pages %}
+      {% if page.layout %}
       <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+      {% endif %}
     {% endfor %}
   </ul>
 </nav>
