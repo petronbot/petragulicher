@@ -1,6 +1,15 @@
 footer {
   margin: $space-xl 0;
 
+  .mail-link:link:before {
+    content: "📬 ";
+    text-shadow: 0px 0px 6px rgba($colour-black, .3);
+  }
+
+  .mail-link:active:before {
+    content: "📪 ";
+  }
+
   p {
     font-size: $font-size-s;
   }
