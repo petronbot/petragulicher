@@ -6,7 +6,7 @@ order: 3
 
 When I'm not having a [bomb diggity time](https://www.instagram.com/explore/tags/austwo/) building [digital products](https://ustwo.com/blog/askies) with [ustwo](https://ustwo.com/what-we-do) I'm usually found lazing about in the park with a good book ([currently](http://english.lem.pl/works/novels/the-star-diaries)) or propping up the bar at my nearest [brewery](http://batchbrewingco.com.au/#ontap).
 
-I built this site using my favourite static site generator, [Jekyll](https://jekyllrb.com). It's hosted on [GitHub pages](https://pages.github.com/) because I 💖 GitHub and it's just so easy.
+I built this site using my favourite static site generator, [Jekyll](https://jekyllrb.com). It's hosted on [Firebase](https://firebase.google.com/docs/hosting/) and the source is on [GitHub](https://pages.github.com/) 💖.
 
 ### So what's with the name?
 
