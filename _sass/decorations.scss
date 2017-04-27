@@ -25,14 +25,20 @@
   }
 
   h1 {
-    color: $colour-highlight;
+    a {
+      color: $colour-highlight;
+      text-decoration: none;
+    }
   }
 
   &.home h1 {
-    color: $colour-fg;
+    a {
+      color: $colour-fg;
+    }
   }
 
-  a {
+  main a,
+  footer a {
     color: $colour-fg;
     &:hover,
     &:active {

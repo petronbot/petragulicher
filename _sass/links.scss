@@ -1,9 +1,10 @@
-a {
+main a,
+footer a {
   @include decoration-underline;
+}
 
-  &:focus {
-    @include decoration-outline;
-  }
+a:focus {
+  @include decoration-outline;
 }
 
 .link__back {
